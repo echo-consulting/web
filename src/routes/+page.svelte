@@ -7,8 +7,8 @@
 <h1>echo Consulting</h1>
 
 <p>
-	Har du et prosjekt som trenger dyktige utviklere? echo Consulting tilbyr konsulenttjenester innne
-	IT og webutvikling, uten at det koster skjorta.
+	Har du et prosjekt som trenger dyktige utviklere? echo Consulting tilbyr konsulenttjenester innen
+	IT og web-utvikling, uten at det koster deg skjorta.
 </p>
 
 <p>
