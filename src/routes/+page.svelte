@@ -13,6 +13,10 @@
 	</p>
 
 	<p>
+		For øyeblikket ser vi etter nye medlemmer. <a href="/sok">Søk her</a>!
+	</p>
+
+	<p>
 		Kontakt oss på <a href="mailto:{EMAIL}">{EMAIL}</a> for en uforpliktende prat.
 	</p>
 </div>
