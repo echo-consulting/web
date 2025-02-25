@@ -1,3 +1,4 @@
+import Nav from "components/nav";
 import type { Route } from "./+types/home";
 
 export function meta({}: Route.MetaArgs) {
@@ -13,6 +14,7 @@ export function meta({}: Route.MetaArgs) {
 export default function Home() {
   return (
     <main>
+      <Nav />
       <h1>Hei</h1>
     </main>
   );
