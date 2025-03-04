@@ -13,6 +13,7 @@ import {
 import type { Route } from "./+types/root";
 import "./app.css";
 import { MantineProvider } from "@mantine/core";
+import Nav from "./components/nav";
 
 export const links: Route.LinksFunction = () => [
   { rel: "preconnect", href: "https://fonts.googleapis.com" },
@@ -37,6 +38,7 @@ export function Layout({ children }: { children: React.ReactNode }) {
         <Links />
       </head>
       <body>
+        <Nav />
         <MantineProvider>{children}</MantineProvider>
         <ScrollRestoration />
         <Scripts />
@@ -50,7 +52,7 @@ export default function App() {
     <MantineProvider>
       <Outlet />;
     </MantineProvider>
-  )
+  );
 }
 
 export function ErrorBoundary({ error }: Route.ErrorBoundaryProps) {
