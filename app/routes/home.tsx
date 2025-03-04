@@ -1,5 +1,7 @@
-import Nav from "components/nav";
+import Nav from "~/components/nav";
 import type { Route } from "./+types/home";
+import { Hero } from "~/components/hero";
+import { Container } from "@mantine/core";
 
 export function meta({}: Route.MetaArgs) {
   return [
@@ -13,9 +15,9 @@ export function meta({}: Route.MetaArgs) {
 
 export default function Home() {
   return (
-    <main>
+    <Container>
       <Nav />
-      <h1>Hei</h1>
-    </main>
+      <Hero />
+    </Container>
   );
 }
