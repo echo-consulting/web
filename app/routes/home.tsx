@@ -1,7 +1,7 @@
 import Nav from "~/components/nav";
 import type { Route } from "./+types/home";
 import { Hero } from "~/components/hero";
-import { Container } from "@mantine/core";
+import { BackgroundImage, Container } from "@mantine/core";
 
 export function meta({}: Route.MetaArgs) {
   return [
@@ -15,8 +15,17 @@ export function meta({}: Route.MetaArgs) {
 
 export default function Home() {
   return (
-    <Container>
-      <Hero />
-    </Container>
+    <div className="relative min-h-screen">
+      {/* BackgroundImage as a separate, absolute element */}
+      <BackgroundImage
+        src="/heightmap_contours.png"
+        radius="sm"
+        className="absolute inset-0 h-full w-full opacity-50" // Opacity here
+      />
+      {/* Content layered above */}
+      <Container className="relative z-10 pt-48">
+        <Hero />
+      </Container>
+    </div>
   );
 }
