@@ -3,7 +3,7 @@ import "./nav.css";
 
 export default function Nav() {
   return (
-    <nav className="flex justify-between items-center mx-24 my-8">
+    <nav className="flex justify-between items-center mx-24 my-8 text-white">
       <div>
         <img src="/consultinglog.svg" alt="logo" className="h-16" />
       </div>
