@@ -2,6 +2,7 @@ import Nav from "~/components/nav";
 import type { Route } from "./+types/home";
 import { Hero } from "~/components/hero";
 import { BackgroundImage, Container } from "@mantine/core";
+import Projects from "~/components/projects";
 
 export function meta({}: Route.MetaArgs) {
   return [
@@ -25,6 +26,7 @@ export default function Home() {
       {/* Content layered above */}
       <Container className="relative z-10 pt-48">
         <Hero />
+        <Projects />
       </Container>
     </div>
   );
