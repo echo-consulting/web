@@ -1,6 +1,7 @@
 import { Container, Title, Button, Text, Box } from "@mantine/core";
 import { Typewriter } from "react-simple-typewriter";
 import { useState } from "react";
+import { Link } from "react-router";
 
 export function Hero() {
     const [fin, setFin] = useState(false);
@@ -13,7 +14,7 @@ export function Hero() {
                         <Typewriter 
                             words={[
                                 "echo\nConsulting",
-                                "Konsulenter-tjenester som ikke koster skjorta.",
+                                "Konsulenttjenester som ikke koster skjorta.",
                                 "echo\nConsulting"
                             ]}
                             loop={1}
@@ -30,9 +31,11 @@ export function Hero() {
                 </Text>
             </Box>
 
-            <Button>
-                Kontakt oss
-            </Button>
+            <Link to="/contact">
+                <Button color="blue" className="mt-8">
+                    Kontakt oss
+                </Button>
+            </Link>
 
         </Container>
     );

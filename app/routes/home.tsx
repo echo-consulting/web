@@ -8,7 +8,7 @@ export function meta({}: Route.MetaArgs) {
     { title: "echo Consulting" },
     {
       name: "description",
-      content: "Konsulent-tjenester som ikke koster skjorta.",
+      content: "Konsulenttjenester som ikke koster skjorta.",
     },
   ];
 }

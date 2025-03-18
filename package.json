@@ -10,6 +10,8 @@
   },
   "dependencies": {
     "@mantine/core": "^7.17.1",
+    "@mantine/form": "^7.17.2",
+    "@mantine/notifications": "^7.17.2",
     "@react-router/node": "^7.1.5",
     "@react-router/serve": "^7.1.5",
     "esbuild": "^0.25.0",
