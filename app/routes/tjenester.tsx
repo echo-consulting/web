@@ -27,11 +27,11 @@ export default function Tjenester() {
             Hvilke tjenester tilbyr vi?
           </Title>
           <Box className="max-w-lg text-white">
-            <List size="lg" spacing="md" withPadding>
-              <List.Item>• Web-utvikling</List.Item>
-              <List.Item>• Backend-utvikling</List.Item>
-              <List.Item>• Frontend-utvikling</List.Item>
-            </List>
+            <ul className="text-lg space-y-3 list-disc pl-5">
+              <li>Web-utvikling</li>
+              <li>Backend-utvikling</li>
+              <li>Frontend-utvikling</li>
+            </ul>
           </Box>
           <Box className="w-full text-white whitespace-pre-wrap">
             <Text size="lg" className="mb-4">
