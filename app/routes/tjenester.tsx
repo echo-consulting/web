@@ -3,7 +3,7 @@ import type { Route } from "./+types/home";
 import { BackgroundImage, Container, Title, Text, Stack, Box, List } from "@mantine/core";
 import { Link } from "react-router";
 
-export function meta({ }: Route.MetaArgs) {
+export function meta() {
   return [
     { title: "Tjenester - echo Consulting" },
     {
