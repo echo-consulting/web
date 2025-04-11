@@ -1,0 +1,57 @@
+import type { Route } from "./+types/home";
+import { Title, Text, Anchor, BackgroundImage, Container } from "@mantine/core";
+import { Bold } from "lucide-react";
+import { Link } from "react-router";
+
+export function meta({}: Route.MetaArgs) {
+  return [
+    { title: "Om echo Consulting" },
+    {
+      name: "description",
+      content: "Hvem er echo consulting, og hva tilbyr vi?",
+    },
+  ];
+}
+
+export default function AboutUs() {
+  return (
+    <div className="relative min-h-screen">
+      <BackgroundImage
+        src="/heightmap_contours.png"
+        radius="sm"
+        className="absolute inset-0 h-full w-full opacity-50" // Opacity here
+      />
+      <Container className="relative z-10 pt-30 text-white text-left space-y-10">
+        <Title
+          order={1}
+          className="text-5xl max-w-[25rem] font-bold pb-8 whitespace-pre-line"
+        >
+          Om echo Consulting
+        </Title>
+        <Text style={{ marginBottom: "1rem" }}>
+          echo Consulting er en undergruppe av linjeforeningen for informatikk
+          ved Universitetet i Bergen. Gruppen består av 10 engasjerte
+          informatikkstudenter med stor interesse for web-utvikling.
+        </Text>
+        <Text>
+          Vi tilbyr rådgivning og løsninger innen teknologi og digital
+          utvikling. Gjennom echo Consulting bygger vi bro mellom teori og
+          praksis, samtidig som vi hjelper bedrifter med å nå sine mål.
+        </Text>
+        <Anchor component={Link} to="/tjenester" underline="always" c="white">
+          {" "}
+          Sjekk ut hva vi kan tilby din organisasjon her!
+        </Anchor>
+
+        <Title
+          order={2}
+          className="text-5xl max-w-[25rem] font-bold pb-2"
+          style={{ marginTop: "1rem"}}
+        >
+          Medlemmer 2024/2025
+        </Title>
+        <img src="/medlemmer.png" width="800" />
+      </Container>
+    </div>
+  );
+}

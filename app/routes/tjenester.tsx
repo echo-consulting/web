@@ -1,6 +1,14 @@
 import Nav from "~/components/nav";
 import type { Route } from "./+types/home";
-import { BackgroundImage, Container, Title, Text, Stack, Box, List } from "@mantine/core";
+import {
+  BackgroundImage,
+  Container,
+  Title,
+  Text,
+  Stack,
+  Box,
+  List,
+} from "@mantine/core";
 import { Link } from "react-router";
 
 export function meta() {
@@ -35,18 +43,24 @@ export default function Tjenester() {
           </Box>
           <Box className="w-full text-white whitespace-pre-wrap">
             <Text size="lg" className="mb-4">
-              Vi bygger løsninger som ikke bare ser bra ut, men som også er enkle å vedlikeholde. 
-              Med Sanity som innholdshåndteringssystem kan du selv legge til og redigere innhold — 
-              helt uten å skrive en eneste kodelinje.
+              Vi bygger løsninger som ikke bare ser bra ut, men som også er
+              enkle å vedlikeholde. Med Sanity som innholdshåndteringssystem kan
+              du selv legge til og redigere innhold — helt uten å skrive en
+              eneste kodelinje.
             </Text>
             <Text size="lg" className="mb-4">
-              Enten du vil publisere arrangementer, nyheter, produkter eller blogginnlegg, 
-              gjør du det enkelt og effektivt, rett fra nettleseren.
+              Enten du vil publisere arrangementer, nyheter, produkter eller
+              blogginnlegg, gjør du det enkelt og effektivt, rett fra
+              nettleseren.
             </Text>
           </Box>
           <Box className="max-w-lg text-white">
             <Text size="lg" className="whitespace-nowrap">
-              Sjekk ut våre fullførte <Link to="/prosjekter" className="underline">prosjekter</Link> her!
+              Sjekk ut våre fullførte{" "}
+              <Link to="/prosjekter" className="underline">
+                prosjekter
+              </Link>{" "}
+              her!
             </Text>
           </Box>
           {/* Service sections will be added here */}
@@ -57,4 +71,4 @@ export default function Tjenester() {
       </Container>
     </div>
   );
-} 
+}
