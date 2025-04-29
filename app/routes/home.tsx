@@ -26,7 +26,7 @@ export default function Home() {
       {/* Content layered above */}
       <Container className="relative z-10 pt-48">
         <Hero />
-        <Projects />
+        {/* <Projects /> */}
       </Container>
     </div>
   );
