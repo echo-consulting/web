@@ -1,6 +1,6 @@
 import { Link } from "react-router";
 
-export default function Nav() {
+export function Nav() {
   return (
     <nav className="flex justify-between items-center mx-24 my-8 text-white fixed top-0 left-0 right-0 z-20">
       <div>

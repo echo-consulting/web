@@ -11,9 +11,8 @@ import {
 } from "react-router";
 
 import type { Route } from "./+types/root";
-import "./app.css";
-import { MantineProvider } from "@mantine/core";
-import Nav from "./components/nav";
+import { BackgroundImage, MantineProvider } from "@mantine/core";
+import { Nav } from "./components/nav";
 
 export const links: Route.LinksFunction = () => [
   { rel: "preconnect", href: "https://fonts.googleapis.com" },
@@ -37,22 +36,24 @@ export function Layout({ children }: { children: React.ReactNode }) {
         <Meta />
         <Links />
       </head>
-      <body>
-        <Nav />
-        <MantineProvider>{children}</MantineProvider>
-        <ScrollRestoration />
-        <Scripts />
-      </body>
+      <MantineProvider>
+        <body>
+          <Nav />
+          <BackgroundImage
+            src="/heightmap_contours.png"
+            className="absolute inset-0 h-full w-full opacity-20"
+          />
+          <MantineProvider>{children}</MantineProvider>
+          <ScrollRestoration />
+          <Scripts />
+        </body>
+      </MantineProvider>
     </html>
   );
 }
 
 export default function App() {
-  return (
-    <MantineProvider>
-      <Outlet />
-    </MantineProvider>
-  );
+  return <Outlet />;
 }
 
 export function ErrorBoundary({ error }: Route.ErrorBoundaryProps) {

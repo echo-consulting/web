@@ -1,5 +1,5 @@
 import { Hero } from "~/components/hero";
-import { BackgroundImage, Container } from "@mantine/core";
+import { Container } from "@mantine/core";
 
 export function meta() {
   return [
@@ -14,16 +14,8 @@ export function meta() {
 export default function Home() {
   return (
     <div className="relative min-h-screen">
-      {/* BackgroundImage as a separate, absolute element */}
-      <BackgroundImage
-        src="/heightmap_contours.png"
-        radius="sm"
-        className="absolute inset-0 h-full w-full opacity-50" // Opacity here
-      />
-      {/* Content layered above */}
       <Container className="relative z-10 pt-48">
         <Hero />
-        {/* <Projects /> */}
       </Container>
     </div>
   );

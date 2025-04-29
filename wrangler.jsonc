@@ -1,0 +1,13 @@
+{
+  "$schema": "node_modules/wrangler/config-schema.json",
+  "name": "consulting-web",
+  "compatibility_date": "2025-04-04",
+  "main": "./workers/app.ts",
+  "compatibility_flags": ["nodejs_compat"],
+  "routes": [
+    {
+      "custom_domain": true,
+      "pattern": "echo-consulting.no"
+    }
+  ]
+}

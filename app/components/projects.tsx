@@ -1,13 +1,4 @@
-import {
-  Badge,
-  Button,
-  Card,
-  Container,
-  Group,
-  Text,
-  Title,
-  Image,
-} from "@mantine/core";
+import { Container, Title } from "@mantine/core";
 import { ArrowRight } from "lucide-react";
 import { useState } from "react";
 
