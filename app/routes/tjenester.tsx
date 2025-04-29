@@ -1,12 +1,4 @@
-import {
-  BackgroundImage,
-  Container,
-  Title,
-  Text,
-  Stack,
-  Box,
-} from "@mantine/core";
-import { Link } from "react-router";
+import { Container, Title, Text, Stack, Box } from "@mantine/core";
 
 export function meta() {
   return [
@@ -44,15 +36,6 @@ export default function Tjenester() {
               Enten du vil publisere arrangementer, nyheter, produkter eller
               blogginnlegg, gjør du det enkelt og effektivt, rett fra
               nettleseren.
-            </Text>
-          </Box>
-          <Box className="max-w-lg text-white">
-            <Text size="lg" className="whitespace-nowrap">
-              Sjekk ut våre fullførte{" "}
-              <Link to="/prosjekter" className="underline">
-                prosjekter
-              </Link>{" "}
-              her!
             </Text>
           </Box>
           {/* Service sections will be added here */}
