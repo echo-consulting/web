@@ -1,4 +1,4 @@
-import { Container, Title, Button, Text, Box } from "@mantine/core";
+import { Container, Title, Text, Box } from "@mantine/core";
 import { Typewriter } from "react-simple-typewriter";
 import { useState } from "react";
 
@@ -27,6 +27,7 @@ export function Hero() {
           />
         )}
       </Title>
+
       <Box className="max-w-lg pb-4 block">
         <Text size="lg">
           Vi tilbyr profesjonelle konsulenttjenester til rimelige priser,
@@ -35,7 +36,12 @@ export function Hero() {
         </Text>
       </Box>
 
-      <Button>Kontakt oss</Button>
+      <a
+        className="px-4 font-semibold hover:underline rounded-md bg-gray-900 py-3 text-gray-200 hover:bg-gray-800 transition-colors duration-200 ease-in-out"
+        href="mailto:consulting@echo.uib.no"
+      >
+        Kontakt oss
+      </a>
     </Container>
   );
 }
