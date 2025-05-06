@@ -17,7 +17,7 @@ export function Hero() {
           <Typewriter
             words={[
               "echo\nConsulting",
-              "Konsulenter-tjenester som ikke koster skjorta.",
+              "Konsulenttjenester som ikke koster skjorta.",
               "echo\nConsulting",
             ]}
             loop={1}
