@@ -7,11 +7,16 @@
     "cf-typegen": "wrangler types",
     "deploy": "pnpm run build && wrangler deploy",
     "dev": "react-router dev",
-    "preview": "pnpm run build && vite preview",
-    "typecheck": "pnpm run cf-typegen && react-router typegen && tsc -b"
+    "preview": "npm run build && vite preview",
+    "typecheck": "npm run cf-typegen && react-router typegen && tsc -b",
+    "db:generate": "drizzle-kit generate",
+    "db:migrate": "drizzle-kit migrate"
   },
   "dependencies": {
+    "@libsql/client": "^0.15.8",
     "@mantine/core": "^7.17.1",
+    "dotenv": "^16.5.0",
+    "drizzle-orm": "^0.44.1",
     "isbot": "^5.1.27",
     "lucide-react": "^0.503.0",
     "react": "^19.1.0",
@@ -27,7 +32,9 @@
     "@types/node": "^20",
     "@types/react": "^19.1.2",
     "@types/react-dom": "^19.1.2",
+    "drizzle-kit": "^0.31.1",
     "tailwindcss": "^4.1.4",
+    "tsx": "^4.19.4",
     "typescript": "^5.8.3",
     "vite": "^6.3.3",
     "vite-tsconfig-paths": "^5.1.4",
