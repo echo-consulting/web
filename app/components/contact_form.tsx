@@ -54,7 +54,7 @@ export function ContactForm() {
                     <TextInput withAsterisk label="E-post" key={form.key("email")}{...form.getInputProps("email")} placeholder="ola.nordmann@firma.no"/>
                 </Grid.Col>
             </Grid>
-            <Textarea label="Melding" key={form.key("content")}{...form.getInputProps("content")} __size="" autosize minRows={4} placeholder="Hei, Echo Consulting! Jeg er interessert i deres konsulenttjenester og ønsker mer informasjon. Vennligst ta kontakt med meg!"/>    
+            <Textarea label="Melding" key={form.key("content")}{...form.getInputProps("content")} __size="" autosize minRows={4} placeholder="Hei, echo Consulting! Jeg er interessert i deres konsulenttjenester og ønsker mer informasjon. Vennligst ta kontakt med meg!"/>    
         
             <Group justify="flex-end" mt="md">
                 <Button leftSection={<IoSend/>} color="blue" className="mt-8" type="submit">
