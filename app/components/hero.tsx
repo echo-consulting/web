@@ -38,7 +38,7 @@ export function Hero() {
 
       <a
         className="px-4 font-semibold hover:underline rounded-md bg-gray-900 py-3 text-gray-200 hover:bg-gray-800 transition-colors duration-200 ease-in-out"
-        href="mailto:consulting@echo.uib.no"
+        href="/kontakt-oss"
       >
         Kontakt oss
       </a>

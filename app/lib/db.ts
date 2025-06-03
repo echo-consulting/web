@@ -1,4 +1,4 @@
-import {config } from 'dotenv';
+import { config } from 'dotenv';
 import { drizzle } from 'drizzle-orm/libsql';
 
 config({ path: '.dev.vars'});
