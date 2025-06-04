@@ -4,11 +4,12 @@
   "compatibility_date": "2025-04-04",
   "main": "./workers/app.ts",
   "compatibility_flags": ["nodejs_compat"],
-  "account_id": "0986935ab63fa9bf6211f2e37355a5df"
-  // "routes": [
-  //   {
-  //     "custom_domain": true,
-  //     "pattern": "echo-consulting.no"
-  //   }
-  // ]
+  "account_id": "0986935ab63fa9bf6211f2e37355a5df",
+  "workers_dev": false,
+  "routes": [
+    {
+      "custom_domain": true,
+      "pattern": "echo-consulting.no"
+    }
+  ]
 }
