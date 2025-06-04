@@ -1,12 +1,14 @@
-import { config } from 'dotenv';
-import { drizzle } from 'drizzle-orm/libsql';
+import { drizzle } from "drizzle-orm/libsql";
+import * as schema from "./schema";
 
-config({ path: '.dev.vars'});
+export type Database = ReturnType<typeof intiDB>;
 
-// You can specify any property from the libsql connection options
-export const db = drizzle({ 
-  connection: { 
-    url: process.env.TURSO_DATABASE_URL!, 
-    authToken: process.env.TURSO_AUTH_TOKEN!
-  }
-});
+export const intiDB = (url: string, authToken: string) => {
+  return drizzle({
+    connection: {
+      url,
+      authToken,
+    },
+    schema,
+  });
+};
