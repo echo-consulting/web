@@ -9,10 +9,14 @@ export function Hero() {
       <Title
         order={1}
 <<<<<<< HEAD
+<<<<<<< HEAD
         className="text-4xl md:text-5xl min-h-[5rem] md:min-h-[7rem] max-w-[25rem] font-bold pb-4 whitespace-pre-line leading-tight"
 =======
         className="text-5xl h-28 max-w-[25rem] font-bold pb-8 whitespace-pre-line"
 >>>>>>> 84d0d3b (rebase)
+=======
+        className="text-4xl md:text-5xl min-h-[5rem] md:min-h-[7rem] max-w-[25rem] font-bold pb-4 whitespace-pre-line leading-tight"
+>>>>>>> ce5f824 (Fixed typewriter overlapping issue + added about section)
       >
         {fin ? (
           "Konsulenter som ikke koster skjorta."
