@@ -36,14 +36,14 @@ export function Layout({ children }: { children: React.ReactNode }) {
         <Meta />
         <Links />
       </head>
-      <MantineProvider>
+      <MantineProvider defaultColorScheme="dark">
         <body>
           <Nav />
           <BackgroundImage
             src="/heightmap_contours.png"
             className="absolute inset-0 h-full w-full opacity-20"
           />
-          <MantineProvider>{children}</MantineProvider>
+          <MantineProvider defaultColorScheme="dark">{children}</MantineProvider>
           <ScrollRestoration />
           <Scripts />
         </body>

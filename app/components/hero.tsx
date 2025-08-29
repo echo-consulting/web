@@ -9,7 +9,7 @@ export function Hero() {
     <Container className="text-white text-left">
       <Title
         order={1}
-        className="text-5xl h-28 max-w-[25rem] font-bold pb-8 whitespace-pre-line"
+        className="text-4xl md:text-5xl min-h-[5rem] md:min-h-[7rem] max-w-[25rem] font-bold pb-4 whitespace-pre-line leading-tight"
       >
         {fin ? (
           "Konsulenter som ikke koster skjorta."
@@ -37,7 +37,8 @@ export function Hero() {
       </Box>
 
       <a
-        className="px-4 font-semibold hover:underline rounded-md bg-gray-900 py-3 text-gray-200 hover:bg-gray-800 transition-colors duration-200 ease-in-out"
+        className="px-8 font-semibold hover:underline rounded-md bg-white py-3 text-black hover:bg-gray-100 transition-colors duration-200 ease-in-out inline-block"
+        style={{ marginTop: '1rem' }}
         href="mailto:consulting@echo.uib.no"
       >
         Kontakt oss

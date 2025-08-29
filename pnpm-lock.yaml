@@ -31,7 +31,7 @@ importers:
         version: 5.0.1(react-dom@19.1.0(react@19.1.0))(react@19.1.0)
     devDependencies:
       '@cloudflare/vite-plugin':
-        specifier: ^1.0.12
+        specifier: ^1.0.13
         version: 1.0.13(rollup@4.40.1)(vite@6.3.3(@types/node@20.17.32)(jiti@2.4.2)(lightningcss@1.29.2))(workerd@1.20250428.0)(wrangler@4.14.0(@cloudflare/workers-types@4.20250429.0))
       '@cloudflare/workers-types':
         specifier: ^4.20250429.0
