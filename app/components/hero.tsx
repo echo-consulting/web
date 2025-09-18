@@ -6,7 +6,7 @@ export function Hero() {
   const [fin, setFin] = useState(false);
 
   return (
-    <Container className="text-white text-left">
+    <Container className="text-white text-left pb-64">
       <Title
         order={1}
         className="text-5xl h-28 max-w-[25rem] font-bold pb-8 whitespace-pre-line"
