@@ -1,5 +1,6 @@
 import { Hero } from "~/components/hero";
 import { Container } from "@mantine/core";
+import { Footer } from "~/components/footer";
 
 export function meta() {
   return [
@@ -16,6 +17,7 @@ export default function Home() {
     <div className="relative min-h-screen">
       <Container className="relative z-10 pt-48">
         <Hero />
+        <Footer />
       </Container>
     </div>
   );
