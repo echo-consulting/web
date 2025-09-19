@@ -5,10 +5,10 @@ import { useState } from "react";
 // Dette skal hentes fra Sanity etterhvert
 const projectData = [
   {
-    title: "Prosjekt1",
-    desc: "bla bla",
+    title: "LFFH-nettsiden",
+    desc: "Funksjonell nettside for Linjeforeningen for Fiskehelse og Havbruk, men mulighet for blant annet innlogging, arrangementopprettelse og påmelding til arrangementer",
     image:
-      "https://www.alvdalmiv.no/wp-content/uploads/2017/04/Bilder_2017_Uke13_fgp-1024x576.jpg",
+      "https://www.alvdalmiv.no/wp-content/uploads/2017/04/Bilder_2017_Uke13_fgp-1024x576.jpg", // TODO
   },
   {
     title: "Prosjekt2",
@@ -16,12 +16,14 @@ const projectData = [
     image:
       "https://www.visitjotunheimen.no/dmsimgs/Flaklypa_Grand_Prix_16x9_1966284657.jpg",
   },
+  /*
   {
     title: "Prosjekt3",
     desc: "bla bla",
     image:
       "https://gfx.nrk.no/rdq_-xdNXpQ-2cX_AyAI9gfbgoATLuCiMeTbC5etcQaQ.jpg",
   },
+  */
 ];
 
 export default function Projects() {
