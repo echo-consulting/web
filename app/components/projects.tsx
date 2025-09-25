@@ -4,20 +4,24 @@ import { useState } from "react";
 import { Link } from "react-router";
 
 // Dette skal hentes fra Sanity etterhvert
-const projectData = [
+export const projectData = [
   {
+    slug: "lffh",
     title: "LFFH-nettsiden",
     desc: "Funksjonell nettside for Linjeforeningen for Fiskehelse og Havbruk, men mulighet for blant annet innlogging, arrangementopprettelse og påmelding til arrangementer",
-    image: "../../public/lffh_logo.png",
+    image: "/lffh_logo.png",
+    link: "https://www.lffh.no/",
+  },
+  {
+    slug: "integrerbar",
+    title: "Integrerbar-nettsiden (under utvikling)",
+    desc: "Nettside for baren Integrerbar for studenter på fakultet for Naturvitenskap og Teknologi som holder til på Realfagsbygget.",
+    image: "/integrerbar_logo.jpg",
+    link: "",
   },
   /*
   {
-    title: "Prosjekt2",
-    desc: "bla bla",
-    image:
-      "https://www.visitjotunheimen.no/dmsimgs/Flaklypa_Grand_Prix_16x9_1966284657.jpg",
-  },
-  {
+    slug: "prosjekt3",
     title: "Prosjekt3",
     desc: "bla bla",
     image:
@@ -26,7 +30,7 @@ const projectData = [
   */
 ];
 
-export default function Projects() {
+export default function Prosjekter() {
   const [hoveredCard, setHoveredCard] = useState<number | null>(null);
 
   return (
@@ -52,7 +56,7 @@ export default function Projects() {
             </h3>
             <p className="text-[#CFCDCD] tracking-wider">{project.desc}</p>
             <Link
-              to={`projects/${index}`}
+              to={`prosjekter/${project.slug}`}
               className="flex items-center gap-2 font-medium tracking-wider mt-2 group"
             >
               Les mer her
