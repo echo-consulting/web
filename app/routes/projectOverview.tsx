@@ -4,6 +4,16 @@ import { projectData } from "../components/projects";
 import { ArrowRight } from "lucide-react";
 import { useState } from "react";
 
+export function meta() {
+  return [
+    { title: "Prosjekter - echo Consulting" },
+    {
+      name: "description",
+      content: "Eksempler på våre prosjekter.",
+    },
+  ];
+}
+
 export default function ProjectOverview() {
   const [hoveredCard, setHoveredCard] = useState<number | null>(null);
 
@@ -12,19 +22,19 @@ export default function ProjectOverview() {
       <Container className="relative z-10 pt-48 text-white">
         <Stack gap="xl">
           <Title className="text-5xl font-bold text-center">Prosjekter</Title>
-          <div className="flex flex-row gap-4 mt-8">
+          <div className="flex flex-col items-center gap-4 mt-8">
             {projectData.map((project, index) => (
               <div
                 key={index}
-                className="p-4 rounded-lg transition-all duration-300 hover:bg-black/10"
+                className="p-4 max-w-xl rounded-lg transition-all duration-300 hover:bg-black/10 text-center mx-auto"
                 onMouseEnter={() => setHoveredCard(index)}
                 onMouseLeave={() => setHoveredCard(null)}
               >
-                <div className="flex w-64 h-64 mb-4 overflow-hidden relative">
+                <div className="mb-4 mx-auto">
                   <img
-                    src={project.image}
+                    src={project.large_img}
                     alt={project.title}
-                    className="h-full w-full object-cover"
+                    className="w-full h-auto object-contain"
                   />
                 </div>
                 <h3 className="font-bold text-white tracking-widest">
@@ -32,8 +42,8 @@ export default function ProjectOverview() {
                 </h3>
                 <p className="text-[#CFCDCD] tracking-wider">{project.desc}</p>
                 <Link
-                  to={`prosjekter/${project.slug}`}
-                  className="flex items-center gap-2 font-medium tracking-wider mt-2 group"
+                  to={`${project.slug}`}
+                  className="flex justify-center items-center gap-2 font-medium tracking-wider mt-2 group"
                 >
                   Les mer her
                   <span
