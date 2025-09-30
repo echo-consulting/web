@@ -9,14 +9,16 @@ export const projectData = [
     slug: "lffh",
     title: "LFFH-nettsiden",
     desc: "Funksjonell nettside for Linjeforeningen for Fiskehelse og Havbruk, men mulighet for blant annet innlogging, arrangementopprettelse og påmelding til arrangementer",
-    image: "/lffh_logo.png",
+    small_img: "/lffh_logo.png",
+    large_img: "/lffh_rectangle.png",
     link: "https://www.lffh.no/",
   },
   {
     slug: "integrerbar",
     title: "Integrerbar-nettsiden (under utvikling)",
     desc: "Nettside for baren Integrerbar for studenter på fakultet for Naturvitenskap og Teknologi som holder til på Realfagsbygget.",
-    image: "/integrerbar_logo.jpg",
+    small_img: "/integrerbar_logo.jpg",
+    large_img: "/integrerbar_rectangle.jpeg",
     link: "",
   },
   /*
@@ -24,8 +26,10 @@ export const projectData = [
     slug: "prosjekt3",
     title: "Prosjekt3",
     desc: "bla bla",
-    image:
+    small_img:
       "https://gfx.nrk.no/rdq_-xdNXpQ-2cX_AyAI9gfbgoATLuCiMeTbC5etcQaQ.jpg",
+    large_img: "https://gfx.nrk.no/rdq_-xdNXpQ-2cX_AyAI9gfbgoATLuCiMeTbC5etcQaQ.jpg",
+    link: "",
   },
   */
 ];
@@ -46,7 +50,7 @@ export default function Prosjekter() {
           >
             <div className="w-64 h-64 mb-4 overflow-hidden relative">
               <img
-                src={project.image}
+                src={project.small_img}
                 alt={project.title}
                 className="h-full w-full object-cover"
               />
