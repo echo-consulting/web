@@ -18,7 +18,7 @@ export default function Home() {
       <Container className="relative z-10 pt-48">
         <Hero />
       </Container>
-      <Container className="mt-25">
+      <Container className="mt-25 mb-25">
         <ProjectsSection />
       </Container>
     </div>

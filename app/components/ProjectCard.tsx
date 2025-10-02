@@ -23,12 +23,12 @@ const ProjectCard = ({
       <div
         className="h-52 md:h-72 rounded-t-xl relative group"
         style={{
-          background: `url(${imgUrl})`,
-          backgroundSize: "cover",
+          background: `url(${imgUrl}) `,
+          backgroundSize: "100% 100%",
           backgroundPosition: "center",
         }}
       >
-        <div className="overlay items-center justify-center absolute top-0 left-0 w-full h-full bg-[#011627] opacity-0 group-hover:flex group-hover:opacity-80 transition-all duration-200">
+        <div className="overlay flex items-center justify-center absolute top-0 left-0 w-full h-full bg-[#011627] opacity-0 group-hover:opacity-80 transition-all duration-250">
           <a
             href={previewUrl}
             className="h-14 w-14 border-2 relative rounded-full border-[#ADB7BE] hover:border-white flex items-center justify-center"
@@ -39,13 +39,15 @@ const ProjectCard = ({
       </div>
       <a
         href={prosjektSide}
-        className="text-white rounded-b-xl mt-3 bg-[#011627] py-6 px-4 block cursor-pointer"
+        className="text-white rounded-b-xl bg-[#011627] py-6 px-4 block cursor-pointer"
         style={{ textDecoration: "none" }}
         onMouseEnter={() => setIsHovered(true)}
         onMouseLeave={() => setIsHovered(false)}
       >
         <h5 className="font-xl font-semibold mb-2">{title}</h5>
-        <p className="text-[#ADB7BE]">{description}</p>
+        <p style={{ whiteSpace: "pre-line" }} className="text-[#ADB7BE]">
+          {description}
+        </p>
 
         <span
           className={`flex items-center gap-2 font-medium tracking-wider transition-colors duration-300 ${
