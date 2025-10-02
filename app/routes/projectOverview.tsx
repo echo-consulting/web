@@ -1,6 +1,6 @@
 import { Link } from "react-router";
 import { Container, Title, Stack } from "@mantine/core";
-import { projectData } from "../components/projects";
+import { projectData } from "../components/projectsSection";
 import { ArrowRight } from "lucide-react";
 import { useState } from "react";
 
