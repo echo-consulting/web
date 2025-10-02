@@ -1,6 +1,7 @@
-import { ArrowLeft, ArrowRight } from "lucide-react";
+import { ArrowRight } from "lucide-react";
 
 type ProjectDetailProps = {
+  slug: string;
   title: string;
   desc: string;
   small_img: string;
@@ -11,7 +12,6 @@ type ProjectDetailProps = {
 export default function ProjectDetail({
   title,
   desc,
-  small_img,
   large_img,
   link,
 }: ProjectDetailProps) {
@@ -39,16 +39,6 @@ export default function ProjectDetail({
       ) : (
         <></>
       )}
-      <div className="flex justify-between w-full max-w-3xl mt-12">
-        <button className="px-4 py-2 bg-gray-700 rounded hover:bg-gray-600">
-          <ArrowLeft size={16} />
-          Forrige
-        </button>
-        <button className="px-4 py-2 bg-gray-700 rounded hover:bg-gray-600">
-          Neste
-          <ArrowRight size={16} />
-        </button>
-      </div>
     </div>
   );
 }
