@@ -13,6 +13,7 @@ import {
 import type { Route } from "./+types/root";
 import { BackgroundImage, MantineProvider } from "@mantine/core";
 import { Nav } from "./components/nav";
+import { Footer } from "./components/footer";
 
 export const links: Route.LinksFunction = () => [
   { rel: "preconnect", href: "https://fonts.googleapis.com" },
@@ -38,12 +39,26 @@ export function Layout({ children }: { children: React.ReactNode }) {
       </head>
       <MantineProvider defaultColorScheme="dark">
         <body>
+<<<<<<< HEAD
           <Nav />
           <BackgroundImage
             src="/heightmap_contours.png"
             className="absolute inset-0 h-full w-full opacity-20"
           />
           <MantineProvider defaultColorScheme="dark">{children}</MantineProvider>
+=======
+          <MantineProvider>
+            <div className="min-h-screen flex flex-col w-full">
+              <Nav />
+              <BackgroundImage
+                src="/heightmap_contours.png"
+                className="absolute inset-0 h-full w-full opacity-20"
+              />
+              {children}
+              <Footer />
+            </div>
+          </MantineProvider>
+>>>>>>> 84d0d3b (rebase)
           <ScrollRestoration />
           <Scripts />
         </body>
