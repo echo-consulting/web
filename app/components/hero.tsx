@@ -4,12 +4,11 @@ import { useState } from "react";
 
 export function Hero() {
   const [fin, setFin] = useState(false);
-
   return (
-    <Container className="text-white text-left pb-64">
+    <Container className="text-white text-left">
       <Title
         order={1}
-        className="text-5xl min-h-28 max-w-[25rem] font-bold pb-8 whitespace-pre-line"
+        className="text-5xl h-28 max-w-[25rem] font-bold pb-8 whitespace-pre-line"
       >
         {fin ? (
           "Konsulenter som ikke koster skjorta."
@@ -17,7 +16,7 @@ export function Hero() {
           <Typewriter
             words={[
               "echo\nConsulting",
-              "Konsulenttjenester som ikke koster skjorta.",
+              "Konsulenter-tjenester som ikke koster skjorta.",
               "echo\nConsulting",
             ]}
             loop={1}
@@ -27,7 +26,6 @@ export function Hero() {
           />
         )}
       </Title>
-
       <Box className="max-w-lg pb-4 block">
         <Text size="lg">
           Vi tilbyr profesjonelle konsulenttjenester til rimelige priser,
