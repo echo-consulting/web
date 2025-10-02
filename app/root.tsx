@@ -36,8 +36,8 @@ export function Layout({ children }: { children: React.ReactNode }) {
         <Meta />
         <Links />
       </head>
-        <body>
-          <MantineProvider>
+      <body className="relative">
+        <MantineProvider>
           <Nav />
           <BackgroundImage
             src="/heightmap_contours.png"
@@ -46,8 +46,8 @@ export function Layout({ children }: { children: React.ReactNode }) {
           <MantineProvider>{children}</MantineProvider>
           <ScrollRestoration />
           <Scripts />
-          </MantineProvider>
-        </body>
+        </MantineProvider>
+      </body>
     </html>
   );
 }
