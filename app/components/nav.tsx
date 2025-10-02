@@ -9,6 +9,9 @@ export function Nav() {
         </Link>
       </div>
       <div className="flex gap-8 text-xl">
+        <Link to="/blog" className="nav-link">
+          Blog
+        </Link>
         <Link to="/tjenester" className="nav-link">
           Tjenester
         </Link>
