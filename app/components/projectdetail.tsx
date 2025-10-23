@@ -1,4 +1,5 @@
 import { ArrowRight } from "lucide-react";
+import { useState } from "react";
 
 type ProjectDetailProps = {
   slug: string;
@@ -15,9 +16,10 @@ export default function ProjectDetail({
   large_img,
   link,
 }: ProjectDetailProps) {
+  const [isHovered, setHoveredCard] = useState(false);
   return (
-    <div className="min-h-screen flex flex-col items-center justify-start p-8 text-white">
-      <h1 className="text-4xl font-bold mb-6">{title}</h1>
+    <div>
+      <h1 className="text-4xl font-bold mb-6 text-center">{title}</h1>
       <img
         src={large_img}
         alt={title}
@@ -30,10 +32,33 @@ export default function ProjectDetail({
           target="_blank"
           rel="noopener noreferrer"
           className="flex justify-center items-center gap-2 font-medium tracking-wider mt-2 group"
+          onMouseEnter={() => setHoveredCard(true)}
+          onMouseLeave={() => setHoveredCard(false)}
         >
-          Link til siden{" "}
-          <span className="inline-flex transition-transform duration-300 group-hover:translate-x-1.5">
-            <ArrowRight size={24} />
+          <span className="relative mt-5">
+            <span
+              className={`transition-colors duration-300 ${
+                isHovered ? "text-blue-400" : "text-white"
+              }`}
+            >
+              Link til siden
+            </span>
+            <span
+              className={`absolute left-0 -bottom-0.5 h-[2px] bg-blue-400 transition-all duration-300 ${
+                isHovered ? "w-full" : "w-0"
+              }`}
+            />
+          </span>
+          <span
+            className="inline-flex transition-transform duration-300 mt-5"
+            style={{
+              transform: isHovered ? "translateX(6px)" : "translateX(0)",
+            }}
+          >
+            <ArrowRight
+              size={24}
+              className={isHovered ? "text-blue-400" : "text-white"}
+            />
           </span>
         </a>
       ) : (

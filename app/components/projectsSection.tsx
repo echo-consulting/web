@@ -6,7 +6,7 @@ export const projectData = [
     slug: "lffh",
     title: "LFFH-nettsiden",
     desc: "Funksjonell nettside for Linjeforeningen for Fiskehelse og Havbruk, men mulighet for blant annet innlogging, arrangementopprettelse og påmelding til arrangementer",
-    small_img: "/lffh_logo.png",
+    small_img: "/lffh_rectangle.png",
     large_img: "/lffh_rectangle.png",
     link: "https://www.lffh.no/",
   },
@@ -14,7 +14,7 @@ export const projectData = [
     slug: "integrerbar",
     title: "Integrerbar-nettsiden (under utvikling)",
     desc: "Nettside for baren Integrerbar for studenter på fakultet for Naturvitenskap og Teknologi som holder til på Realfagsbygget.",
-    small_img: "/integrerbar_logo.jpg",
+    small_img: "/integrerbar_rectangle.jpeg",
     large_img: "/integrerbar_rectangle.jpeg",
     link: "",
   },
@@ -30,7 +30,7 @@ export default function ProjectsSection() {
       {/* Prosjekter */}
       <div className="flex flex-wrap gap-8 justify-center">
         {projectData.map((project) => (
-          <div key={project.slug} className="w-full sm:w-80">
+          <div key={project.slug} className="w-full sm:w-110">
             <ProjectCard
               imgUrl={project.small_img}
               title={project.title}

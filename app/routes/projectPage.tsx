@@ -18,7 +18,7 @@ export default function ProjectPage() {
 
   return (
     <div className="relative min-h-screen">
-      <Container className="relative z-10 pt-48 text-white">
+      <Container className="relative z-10 pt-24 text-white flex flex-col">
         <ProjectDetail {...project} />
 
         <div className="flex justify-between mt-8">
