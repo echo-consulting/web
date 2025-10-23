@@ -1,4 +1,5 @@
 import { Hero } from '~/components/hero';
+import ProjectsSection from '../components/projectsSection';
 import { Container } from '@mantine/core';
 
 export function meta() {
@@ -13,8 +14,13 @@ export function meta() {
 
 export default function Home() {
   return (
-    <Container className="relative z-10 pt-48">
-      <Hero />
-    </Container>
+    <div className="relative min-h-screen">
+      <Container className="relative z-10 pt-48">
+        <Hero />
+      </Container>
+      <Container className="mt-25 mb-25">
+        <ProjectsSection />
+      </Container>
+    </div>
   );
 }
