@@ -13,7 +13,7 @@ export function Footer() {
           <p className="text-sm">Thormøhlens gate 55, 5006 Bergen</p>
         </div>
 
-        <div className="mt-6 text-center flex flex-col items-center">
+        <div className="mt-6 mr-15 text-center flex flex-col items-center">
           <a
             href="https://echo.uib.no/"
             target="_blank"
