@@ -1,4 +1,3 @@
-import { useState } from 'react';
 import { ArrowRight, Eye } from 'lucide-react';
 
 type ProjectCardProps = {
@@ -16,8 +15,6 @@ const ProjectCard = ({
   previewUrl,
   prosjektSide,
 }: ProjectCardProps) => {
-  const [isHovered, setIsHovered] = useState(false);
-
   return (
     <div className="rounded-xl overflow-hidden shadow-lg flex flex-col h-full bg-[#010F1B]">
       <div
@@ -40,37 +37,20 @@ const ProjectCard = ({
       </div>
       <a
         href={prosjektSide}
-        className="text-white rounded-b-xl bg-[#011627] py-6 px-4 flex flex-col justify-between flex-grow cursor-pointer"
+        className="text-white rounded-b-xl bg-[#011627] py-6 px-4 flex flex-col justify-between flex-grow cursor-pointer group"
         style={{ textDecoration: 'none' }}
-        onMouseEnter={() => setIsHovered(true)}
-        onMouseLeave={() => setIsHovered(false)}
       >
         <h5 className="font-xl font-semibold mb-2">{title}</h5>
         <p style={{ whiteSpace: 'pre-line' }} className="text-[#ADB7BE] mb-4">
           {description}
         </p>
-
-        <span
-          className={`flex items-center gap-2 font-medium tracking-wider transition-colors duration-300 ${
-            isHovered ? 'text-blue-400' : 'text-white'
-          }`}
-        >
+        <span className="flex items-center gap-2 font-medium tracking-wider transition-colors duration-300 text-white group-hover:text-blue-400">
           <span className="relative">
             Les mer her
-            <span
-              className={`absolute left-0 -bottom-0.5 h-[2px] bg-blue-400 transition-all duration-300 ${
-                isHovered ? 'w-full' : 'w-0'
-              }`}
-            />
+            <span className="absolute left-0 -bottom-0.5 h-[2px] bg-blue-400 transition-all duration-300 w-+ group-hover:w-full" />
           </span>
-
-          <span
-            className="inline-flex transition-transform duration-300"
-            style={{
-              transform: isHovered ? 'translateX(6px)' : 'translateX(0)',
-            }}
-          >
-            <ArrowRight size={20} className={isHovered ? 'text-blue-400' : 'text-white'} />
+          <span className="inline-flex transition-transform duration-300 translate-none group-hover:translate-x-(6px)">
+            <ArrowRight size={20} className="text-white group-hover:text-blue-400" />
           </span>
         </span>
       </a>
