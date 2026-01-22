@@ -4,7 +4,7 @@ import echoLogo from '../assets/echo-logo.png';
 export function Footer() {
   return (
     <footer className="bg-black text-white py-6 px-4 mt-auto z-50">
-      <div className="container mx-auto flex flex-col md:flex-row justify-between items-center">
+      <div className="container mx-auto grid grid-cols-1 md:grid-cols-3 items-center gap-6">
         <div className="text-center md:text-left">
           <p className="font-semibold">echo Consulting</p>
           <a className="text-sm underline" href="mailto:consulting@echo.uib.no">
@@ -13,7 +13,7 @@ export function Footer() {
           <p className="text-sm">Thormøhlens gate 55, 5006 Bergen</p>
         </div>
 
-        <div className="mt-6 mr-15 text-center flex flex-col items-center">
+        <div className="text-center flex flex-col items-center">
           <a
             href="https://echo.uib.no/"
             target="_blank"
@@ -25,9 +25,9 @@ export function Footer() {
           <p className="text-sm">En undergruppe av echo - Linjeforeningen for informatikk</p>
         </div>
 
-        <div className="mt-4 md:mt-0 text-center md:text-left">
+        <div className="mt-4 md:mt-0 text-center md:text-right">
           <p className="font-semibold mb-1">Følg oss</p>
-          <div className="flex justify-center md:justify-start space-x-4 mt-1">
+          <div className="flex justify-center md:justify-end space-x-4 mt-1 ">
             <a
               href="https://www.linkedin.com/company/echo-consulting-uib"
               target="_blank"
