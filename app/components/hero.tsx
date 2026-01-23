@@ -1,23 +1,20 @@
-import { Container, Title, Text, Box } from "@mantine/core";
-import { Typewriter } from "react-simple-typewriter";
-import { useState } from "react";
+import { Container, Title, Text, Box } from '@mantine/core';
+import { Typewriter } from 'react-simple-typewriter';
+import { useState } from 'react';
 
 export function Hero() {
   const [fin, setFin] = useState(false);
   return (
     <Container className="text-white text-left">
-      <Title
-        order={1}
-        className="text-5xl h-28 max-w-[25rem] font-bold pb-8 whitespace-pre-line"
-      >
+      <Title order={1} className="text-5xl h-28 max-w-[25rem] font-bold pb-8 whitespace-pre-line">
         {fin ? (
-          "Konsulenter som ikke koster skjorta."
+          'Konsulenter som ikke koster skjorta.'
         ) : (
           <Typewriter
             words={[
-              "echo\nConsulting",
-              "Konsulenter-tjenester som ikke koster skjorta.",
-              "echo\nConsulting",
+              'echo\nConsulting',
+              'Konsulenter-tjenester som ikke koster skjorta.',
+              'echo\nConsulting',
             ]}
             loop={1}
             cursor
@@ -28,9 +25,8 @@ export function Hero() {
       </Title>
       <Box className="max-w-lg pb-4 block">
         <Text size="lg">
-          Vi tilbyr profesjonelle konsulenttjenester til rimelige priser,
-          skreddersydd for dine behov. La oss hjelpe deg med å nå dine mål uten
-          å sprenge budsjettet!
+          Vi tilbyr profesjonelle konsulenttjenester til rimelige priser, skreddersydd for dine
+          behov. La oss hjelpe deg med å nå dine mål uten å sprenge budsjettet!
         </Text>
       </Box>
 

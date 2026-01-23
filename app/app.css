@@ -1,8 +1,9 @@
 @import "tailwindcss";
 
 @theme {
-  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif,
-    "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  --font-sans:
+    "Inter", ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji",
+    "Segoe UI Symbol", "Noto Color Emoji";
 }
 
 html,
@@ -15,6 +16,7 @@ body {
 }
 
 .nav-link:hover {
-  text-shadow: 0 0 40px rgba(255, 255, 255, 1),
+  text-shadow:
+    0 0 40px rgba(255, 255, 255, 1),
     0 0 80px rgba(255, 255, 255, 0.9);
 }

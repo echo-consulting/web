@@ -1,5 +1,5 @@
-import { Link } from "react-router";
-import { ConsultingLogo } from "./icons/consulting-logo";
+import { Link } from 'react-router';
+import { ConsultingLogo } from './icons/consulting-logo';
 
 export function Nav() {
   return (
