@@ -1,5 +1,5 @@
 {
-  "name": "foobar",
+  "name": "@echo-consulting/web",
   "private": true,
   "type": "module",
   "scripts": {

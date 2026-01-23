@@ -13,7 +13,8 @@
       "!**/.react-router",
       "!**/.wrangler",
       "!**/build",
-      "!**/dist"
+      "!**/dist",
+      "!**/package.json"
     ]
   },
   "formatter": {
