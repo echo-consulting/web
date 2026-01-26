@@ -1,4 +1,4 @@
-import type { HTMLAttributes } from "react";
+import type { HTMLAttributes } from 'react';
 
 type ConsultingLogoProps = HTMLAttributes<SVGSVGElement>;
 
@@ -10,8 +10,11 @@ export const ConsultingLogo = (props: ConsultingLogoProps) => {
       viewBox="0 0 36 64"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
+      role="img"
+      aria-label="Echo Consulting Logo"
       {...props}
     >
+      <title>Echo Consulting Logo</title>
       <path d="M0 0H36V64H0V0Z" fill="white" />
     </svg>
   );

@@ -1,5 +1,5 @@
-import { FaInstagram, FaLinkedin } from "react-icons/fa";
-import echoLogo from "../assets/echo-logo.png";
+import { FaInstagram, FaLinkedin } from 'react-icons/fa';
+import echoLogo from '../assets/echo-logo.png';
 
 export function Footer() {
   return (
@@ -22,9 +22,7 @@ export function Footer() {
           >
             <img src={echoLogo} alt="echo logo" className="mb-2 w-20 h-auto" />
           </a>
-          <p className="text-sm">
-            En undergruppe av echo - Linjeforeningen for informatikk
-          </p>
+          <p className="text-sm">En undergruppe av echo - Linjeforeningen for informatikk</p>
         </div>
 
         <div className="mt-4 md:mt-0 text-center md:text-left">
