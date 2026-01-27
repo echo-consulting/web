@@ -14,7 +14,8 @@
       "!**/.wrangler",
       "!**/build",
       "!**/dist",
-      "!**/package.json"
+      "!**/package.json",
+      "!**/worker-configuration.d.ts"
     ]
   },
   "formatter": {
