@@ -1,5 +1,5 @@
-import { FaInstagram, FaLinkedin } from 'react-icons/fa';
-import echoLogo from '../assets/echo-logo.png';
+import { FaInstagram, FaLinkedin } from "react-icons/fa";
+import echoLogo from "../assets/echo-logo.png";
 
 export function Footer() {
   return (

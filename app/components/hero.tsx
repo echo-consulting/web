@@ -1,6 +1,6 @@
-import { Container, Title, Text, Box } from '@mantine/core';
-import { Typewriter } from 'react-simple-typewriter';
-import { useState } from 'react';
+import { Container, Title, Text, Box } from "@mantine/core";
+import { Typewriter } from "react-simple-typewriter";
+import { useState } from "react";
 
 export function Hero() {
   const [fin, setFin] = useState(false);
@@ -8,13 +8,13 @@ export function Hero() {
     <Container className="text-white text-left">
       <Title order={1} className="text-5xl h-28 max-w-[25rem] font-bold pb-8 whitespace-pre-line">
         {fin ? (
-          'Konsulenter som ikke koster skjorta.'
+          "Konsulenter som ikke koster skjorta."
         ) : (
           <Typewriter
             words={[
-              'echo\nConsulting',
-              'Konsulenter-tjenester som ikke koster skjorta.',
-              'echo\nConsulting',
+              "echo\nConsulting",
+              "Konsulenter-tjenester som ikke koster skjorta.",
+              "echo\nConsulting",
             ]}
             loop={1}
             cursor

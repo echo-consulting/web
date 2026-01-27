@@ -1,4 +1,4 @@
-import { ArrowRight, Eye } from 'lucide-react';
+import { ArrowRight, Eye } from "lucide-react";
 
 type ProjectCardProps = {
   imgUrl: string;
@@ -21,9 +21,9 @@ const ProjectCard = ({
         className="h-52 md:h-60 rounded-t-xl relative group py-3"
         style={{
           background: `url(${imgUrl}) no-repeat center center `,
-          backgroundSize: 'contain',
-          backgroundPosition: 'center',
-          backgroundOrigin: 'content-box',
+          backgroundSize: "contain",
+          backgroundPosition: "center",
+          backgroundOrigin: "content-box",
         }}
       >
         <div className="overlay flex items-center justify-center absolute inset-0 bg-[#011627] opacity-0 group-hover:opacity-80 transition-all duration-250 rounded-t-xl">
@@ -38,10 +38,10 @@ const ProjectCard = ({
       <a
         href={prosjektSide}
         className="text-white rounded-b-xl bg-[#011627] py-6 px-4 flex flex-col justify-between flex-grow cursor-pointer group"
-        style={{ textDecoration: 'none' }}
+        style={{ textDecoration: "none" }}
       >
         <h5 className="font-xl font-semibold mb-2">{title}</h5>
-        <p style={{ whiteSpace: 'pre-line' }} className="text-[#ADB7BE] mb-4">
+        <p style={{ whiteSpace: "pre-line" }} className="text-[#ADB7BE] mb-4">
           {description}
         </p>
         <span className="flex items-center gap-2 font-medium tracking-wider transition-colors duration-300 text-white group-hover:text-blue-400">

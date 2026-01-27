@@ -1,13 +1,13 @@
-import { Title, Text, Anchor, Container } from '@mantine/core';
-import { Link } from 'react-router';
-import members from '../assets/medlemmer.png';
+import { Title, Text, Anchor, Container } from "@mantine/core";
+import { Link } from "react-router";
+import members from "../assets/medlemmer.png";
 
 export function meta() {
   return [
-    { title: 'Om echo Consulting' },
+    { title: "Om echo Consulting" },
     {
-      name: 'description',
-      content: 'Hvem er echo consulting, og hva tilbyr vi?',
+      name: "description",
+      content: "Hvem er echo consulting, og hva tilbyr vi?",
     },
   ];
 }
@@ -18,7 +18,7 @@ export default function AboutUs() {
       <Title order={1} className="text-5xl max-w-[25rem] font-bold pb-8 whitespace-pre-line">
         Om echo Consulting
       </Title>
-      <Text style={{ marginBottom: '1rem' }}>
+      <Text style={{ marginBottom: "1rem" }}>
         echo Consulting er en undergruppe av linjeforeningen for informatikk ved Universitetet i
         Bergen. Gruppen består av 10 engasjerte informatikkstudenter med stor interesse for
         web-utvikling.
@@ -29,14 +29,14 @@ export default function AboutUs() {
         sine mål.
       </Text>
       <Anchor component={Link} to="/tjenester" underline="always" c="white">
-        {' '}
+        {" "}
         Sjekk ut hva vi kan tilby din organisasjon her!
       </Anchor>
 
       <Title
         order={2}
         className="text-5xl max-w-[25rem] font-bold pb-2"
-        style={{ marginTop: '1rem' }}
+        style={{ marginTop: "1rem" }}
       >
         Medlemmer 2024/2025
       </Title>

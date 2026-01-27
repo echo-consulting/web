@@ -1,8 +1,8 @@
-import { ArrowLeft, ArrowRight } from 'lucide-react';
-import { useParams, Link } from 'react-router';
-import ProjectDetail from '../components/projectDetail';
-import { projectData } from '../components/projectsSection'; // TODO: Replace with real data
-import { Container } from '@mantine/core';
+import { ArrowLeft, ArrowRight } from "lucide-react";
+import { useParams, Link } from "react-router";
+import ProjectDetail from "../components/projectDetail";
+import { projectData } from "../components/projectsSection"; // TODO: Replace with real data
+import { Container } from "@mantine/core";
 
 export default function ProjectPage() {
   const { slug } = useParams();

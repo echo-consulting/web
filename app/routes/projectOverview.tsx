@@ -1,14 +1,14 @@
-import { Link } from 'react-router';
-import { Container, Title, Stack } from '@mantine/core';
-import { projectData } from '../components/projectsSection';
-import { ArrowRight, Eye } from 'lucide-react';
+import { Link } from "react-router";
+import { Container, Title, Stack } from "@mantine/core";
+import { projectData } from "../components/projectsSection";
+import { ArrowRight, Eye } from "lucide-react";
 
 export function meta() {
   return [
-    { title: 'Prosjekter - echo Consulting' },
+    { title: "Prosjekter - echo Consulting" },
     {
-      name: 'description',
-      content: 'Eksempler på våre prosjekter.',
+      name: "description",
+      content: "Eksempler på våre prosjekter.",
     },
   ];
 }
@@ -30,8 +30,8 @@ export default function ProjectOverview() {
                   className="mb-1 mx-auto h-52 rounded-t-xl relative"
                   style={{
                     background: `url(${project.large_img}) no-repeat center center`,
-                    backgroundSize: 'cover',
-                    backgroundPosition: 'center',
+                    backgroundSize: "cover",
+                    backgroundPosition: "center",
                   }}
                 >
                   <div className="absolute inset-0 bg-[#011627] opacity-0 group-hover:opacity-80 transition-opacity duration-300 flex items-center justify-center">
@@ -50,7 +50,7 @@ export default function ProjectOverview() {
                 <Link
                   to={`${project.slug}`}
                   className="bg-[#011627] rounded-b-xl py-6 px-6 text-center block"
-                  style={{ textDecoration: 'none' }}
+                  style={{ textDecoration: "none" }}
                 >
                   <div>
                     <h3 className="font-bold text-white tracking-widest mb-2">{project.title}</h3>

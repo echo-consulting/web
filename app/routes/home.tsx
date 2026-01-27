@@ -1,13 +1,13 @@
-import { Hero } from '~/components/hero';
-import ProjectsSection from '../components/projectsSection';
-import { Container } from '@mantine/core';
+import { Hero } from "~/components/hero";
+import ProjectsSection from "../components/projectsSection";
+import { Container } from "@mantine/core";
 
 export function meta() {
   return [
-    { title: 'echo Consulting' },
+    { title: "echo Consulting" },
     {
-      name: 'description',
-      content: 'Konsulenttjenester som ikke koster skjorta.',
+      name: "description",
+      content: "Konsulenttjenester som ikke koster skjorta.",
     },
   ];
 }
