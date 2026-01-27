@@ -20,9 +20,9 @@ export default function ProjectOverview() {
         <Stack gap="xl">
           <Title className="text-5xl font-bold text-center">Prosjekter</Title>
           <div className="flex flex-col items-center mt-8">
-            {projectData.map((project, index) => (
+            {projectData.map((project) => (
               <div
-                key={index}
+                key={project.slug}
                 className="p-4 max-w-xl w-full rounded-lg overflow-hidden transition-all duration-300 text-center mx-auto group"
               >
                 {/* Bilde med overlay */}
