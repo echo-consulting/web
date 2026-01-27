@@ -1,12 +1,12 @@
-import { Container, Title, Text, Stack, Box } from '@mantine/core';
-import { Link } from 'react-router';
+import { Container, Title, Text, Stack, Box } from "@mantine/core";
+import { Link } from "react-router";
 
 export function meta() {
   return [
-    { title: 'Tjenester - echo Consulting' },
+    { title: "Tjenester - echo Consulting" },
     {
-      name: 'description',
-      content: 'Våre tjenester og løsninger for din bedrift.',
+      name: "description",
+      content: "Våre tjenester og løsninger for din bedrift.",
     },
   ];
 }
@@ -38,10 +38,10 @@ export default function Tjenester() {
         </Box>
         <Box className="max-w-lg text-white">
           <Text size="lg" className="whitespace-nowrap">
-            Sjekk ut våre fullførte{' '}
+            Sjekk ut våre fullførte{" "}
             <Link to="/prosjekter" className="underline">
               prosjekter
-            </Link>{' '}
+            </Link>{" "}
             her!
           </Text>
         </Box>

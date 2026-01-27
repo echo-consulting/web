@@ -11,6 +11,7 @@
     "format:check": "biome format .",
     "lint": "biome lint --write .",
     "lint:check": "biome lint .",
+    "check": "pnpm run format:check && pnpm run lint:check && pnpm run typecheck",
     "preview": "pnpm run build && vite preview",
     "typecheck": "pnpm run cf-typegen && react-router typegen && tsc -b"
   },
