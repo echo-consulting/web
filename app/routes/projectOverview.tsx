@@ -23,11 +23,11 @@ export default function ProjectOverview() {
             {projectData.map((project) => (
               <div
                 key={project.slug}
-                className="p-4 max-w-xl w-full rounded-lg overflow-hidden transition-all duration-300 text-center mx-auto group"
+                className="p-4 max-w-xl w-full rounded-lg overflow-hidden transition-all duration-300 text-center mx-auto"
               >
                 {/* Bilde med overlay */}
                 <div
-                  className="mb-1 mx-auto h-52 rounded-t-xl relative"
+                  className="mb-1 mx-auto h-52 rounded-t-xl relative group overflow-hidden"
                   style={{
                     background: `url(${project.large_img}) no-repeat center center`,
                     backgroundSize: "cover",
@@ -49,7 +49,7 @@ export default function ProjectOverview() {
                 {/* Info og link */}
                 <Link
                   to={`${project.slug}`}
-                  className="bg-[#011627] rounded-b-xl py-6 px-6 text-center block"
+                  className="bg-[#011627] rounded-b-xl py-6 px-6 text-center block group"
                   style={{ textDecoration: "none" }}
                 >
                   <div>
