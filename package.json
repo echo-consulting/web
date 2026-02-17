@@ -17,6 +17,7 @@
   },
   "dependencies": {
     "@mantine/core": "^7.17.1",
+    "@sanity/client": "^7.14.1",
     "isbot": "^5.1.27",
     "lucide-react": "^0.503.0",
     "react": "^19.1.0",
