@@ -40,13 +40,13 @@ export function Layout({ children }: { children: React.ReactNode }) {
       <MantineProvider>
         <body>
           <MantineProvider>
-            <div className="min-h-screen flex flex-col w-full">
+            <div className="relative min-h-screen flex flex-col w-full">
               <Nav />
               <BackgroundImage
                 src="/heightmap_contours.png"
-                className="absolute inset-0 h-full w-full opacity-20"
+                className="absolute inset-0 h-full w-full z-10 opacity-20 pointer-events-none"
               />
-              {children}
+              <div className="relative z-10 flex-1">{children}</div>
               <Footer />
             </div>
           </MantineProvider>

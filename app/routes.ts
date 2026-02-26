@@ -5,5 +5,5 @@ export default [
   route("/tjenester", "routes/tjenester.tsx"),
   route("/prosjekter", "routes/projectOverview.tsx"),
   route("/prosjekter/:slug", "routes/projectPage.tsx"),
-  route("/om-oss", "routes/om-oss-Sanity.tsx"),
+  route("/om-oss", "routes/om-oss-sanity.tsx"),
 ] satisfies RouteConfig;
