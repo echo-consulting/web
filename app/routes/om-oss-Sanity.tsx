@@ -1,12 +1,28 @@
 import { client } from "../sanityClient";
-import imageUrlBuilder from "@sanity/image-url";
+import createImageUrlBuilder from "@sanity/image-url";
 import ReactMarkdown from "react-markdown";
 import { useEffect, useState } from "react";
 import { Mail, Instagram, Linkedin, Facebook, User } from "lucide-react";
 
-const builder = imageUrlBuilder(client);
+//Sanity query: *[_type == "studentGroup" && slug.current == "consulting"][0]
+const builder = createImageUrlBuilder(client);
 function urlFor(source: any) {
   return builder.image(source);
+}
+
+interface Member {
+  role: string;
+  profile?: {
+    _id: string;
+    name: string;
+    image?: {
+      asset: {
+        _ref: string;
+        _type: "reference";
+      };
+      _type: "image";
+    };
+  };
 }
 
 export default function OmOssSanity() {
@@ -16,28 +32,28 @@ export default function OmOssSanity() {
   useEffect(() => {
     client
       .fetch(`
-        *[_type == "studentGroup" && slug.current == "consulting"][0]{
-          name,
-          description,
-          image,
-          socials,
-          members[]{
-            role,
-            profile->{
-              _id,
-              name,
-              image
-            }
+      *[_type == "studentGroup" && slug.current == "consulting"][0]{
+        name,
+        description,
+        image, // HENT KUN NAVNET PÅ FELTET (ikke {asset->})
+        socials,
+        members[]{
+          role,
+          profile->{
+            _id,
+            name,
+            image // HENT KUN NAVNET PÅ FELTET HER OGSÅ
           }
         }
-      `)
+      }
+    `)
       .then((res) => {
-        console.log("DATA:", JSON.stringify(res, null, 2));
+        console.log("Sjekk denne i console:", res.image); // Her skal du se _ref nå
         setData(res);
         setLoading(false);
       })
       .catch((err) => {
-        console.error("Sanity error:", err);
+        console.error(err);
         setLoading(false);
       });
   }, []);
@@ -50,9 +66,14 @@ export default function OmOssSanity() {
     <div className="relative z-10 pt-32 px-8 max-w-[900px] mx-auto text-white pb-20">
       {/* 1. HOVEDBILDE */}
       {data.image && (
-        <div className="mb-12">
+        <div className="mb-4">
+          {/* Denne linjen vil avsløre om URL-en faktisk blir laget */}
+          <p className="text-[10px] text-gray-500 break-all">
+            DEBUG URL: {urlFor(data.image).url()}
+          </p>
+
           <img
-            src={urlFor(data.image).width(1200).auto("format").url()}
+            src={urlFor(data.image).width(1200).url()}
             alt={data.name}
             className="w-full rounded-xl shadow-2xl"
           />
@@ -72,7 +93,7 @@ export default function OmOssSanity() {
       <section className="mb-20">
         <h2 className="text-3xl font-bold mb-8 border-b border-gray-800 pb-4">Vårt Team</h2>
         <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
-          {data.members?.map((member: any, idx: number) => (
+          {data.members?.map((member: Member, idx: number) => (
             <div key={member.profile?._id || idx} className="flex flex-col items-center group">
               <div className="w-32 h-32 md:w-40 md:h-40 rounded-full overflow-hidden mb-4 border-2 border-gray-800 shadow-xl bg-[#011627]">
                 {member.profile?.image ? (
