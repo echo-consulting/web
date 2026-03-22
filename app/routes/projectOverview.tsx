@@ -27,7 +27,7 @@ export default function ProjectOverview() {
               >
                 {/* Bilde med overlay */}
                 <div
-                  className="mb-1 mx-auto h-52 rounded-t-xl relative group overflow-hidden"
+                  className="mx-auto h-52 rounded-t-xl relative group overflow-hidden"
                   style={{
                     background: `url(${project.large_img}) no-repeat center center`,
                     backgroundSize: "cover",
