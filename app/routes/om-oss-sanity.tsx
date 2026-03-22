@@ -1,9 +1,8 @@
-// om-oss-sanity.tsx
 import { client } from "../sanityClient";
 import { createImageUrlBuilder } from "@sanity/image-url";
 import ReactMarkdown from "react-markdown";
-import { useEffect, useState } from "react";
 import { Mail, Instagram, Linkedin, User } from "lucide-react";
+import type { Route } from "./+types/om-oss-sanity";
 
 type SanityImage = {
   _type: "image";
@@ -39,44 +38,37 @@ interface GroupData {
   members?: Member[];
 }
 
-export default function OmOssSanity() {
-  const [data, setData] = useState<GroupData | null>(null);
-  const [loading, setLoading] = useState(true);
-
-  useEffect(() => {
-    client
-      .fetch(`
-      *[_type == "studentGroup" && slug.current == "consulting"][0]{
-        name,
-        description,
-        image,
-        socials,
-        members[]{
-          role,
-          profile->{
-            _id,
-            name,
-            picture
-          }
+export async function clientLoader() {
+  const data = await client.fetch<GroupData>(`
+    *[_type == "studentGroup" && slug.current == "consulting"][0]{
+      name,
+      description,
+      image,
+      socials,
+      members[]{
+        role,
+        profile->{
+          _id,
+          name,
+          picture
         }
       }
-    `)
-      .then((res) => {
-        setData(res);
-        setLoading(false);
-      })
-      .catch((err) => {
-        console.error(err);
-        setLoading(false);
-      });
-  }, []);
+    }
+  `);
+  return data;
+}
 
-  if (loading) return <div className="pt-32 text-center text-white">Laster innhold...</div>;
+export function HydrateFallback() {
+  return <div className="pt-32 text-center text-white">Laster innhold...</div>;
+}
+
+export default function OmOssSanity({ loaderData }: Route.ComponentProps) {
+  const data = loaderData;
+
   if (!data) return <div className="pt-32 text-center text-white">Fant ikke gruppen</div>;
 
   return (
     <div className="relative z-10 pt-32 px-8 max-w-[900px] mx-auto text-white pb-20">
-      {/* 1. HOVEDBILDE */}
       {data.image && (
         <div className="mb-12">
           <img
@@ -95,12 +87,15 @@ export default function OmOssSanity() {
         </div>
       )}
 
-      {/* 3. VÅRT TEAM */}
       <section className="mb-20">
         <h2 className="text-3xl font-bold mb-8 border-b border-gray-800 pb-4">Vårt Team</h2>
         <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
           {data.members?.map((member, idx) => (
-            <div key={member.profile?._id || idx} className="flex flex-col items-center group">
+            <div
+              key={member.profile?._id || idx}
+              className="flex flex-col items-center group motion-safe:animate-in motion-safe:fade-in motion-safe:slide-in-from-bottom-4 duration-500"
+              style={{ animationDelay: `${idx * 100}ms` }}
+            >
               <div className="w-32 h-32 md:w-40 md:h-40 rounded-full overflow-hidden mb-4 border-2 border-gray-800 shadow-xl bg-gray-900 group-hover:border-blue-500 transition-colors duration-300">
                 {member.profile?.picture ? (
                   <img
@@ -131,7 +126,6 @@ export default function OmOssSanity() {
         </div>
       </section>
 
-      {/* 4. KONTAKT */}
       <section className="bg-[#011627] p-8 rounded-2xl border border-gray-800 shadow-inner">
         <h2 className="text-2xl font-bold mb-6 italic text-blue-400">Kontakt oss</h2>
         <div className="flex flex-wrap gap-8">
