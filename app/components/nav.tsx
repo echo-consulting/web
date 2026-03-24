@@ -16,9 +16,9 @@ export function Nav() {
         <Link to="/prosjekter" className="nav-link">
           Prosjekter
         </Link>
-        {/* <Link to="/om-oss" className="nav-link">
+        <Link to="/om-oss" className="nav-link">
           Om oss
-        </Link> */}
+        </Link>
       </div>
     </nav>
   );

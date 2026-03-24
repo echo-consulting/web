@@ -37,23 +37,21 @@ export function Layout({ children }: { children: React.ReactNode }) {
         <Meta />
         <Links />
       </head>
-      <MantineProvider>
-        <body>
-          <MantineProvider>
-            <div className="min-h-screen flex flex-col w-full">
-              <Nav />
-              <BackgroundImage
-                src="/heightmap_contours.png"
-                className="absolute inset-0 h-full w-full opacity-20"
-              />
-              {children}
-              <Footer />
-            </div>
-          </MantineProvider>
-          <ScrollRestoration />
-          <Scripts />
-        </body>
-      </MantineProvider>
+      <body>
+        <MantineProvider>
+          <div className="relative min-h-screen flex flex-col w-full">
+            <Nav />
+            <BackgroundImage
+              src="/heightmap_contours.png"
+              className="absolute inset-0 h-full w-full z-10 opacity-20 pointer-events-none"
+            />
+            <div className="relative z-10 flex-1">{children}</div>
+            <Footer />
+          </div>
+        </MantineProvider>
+        <ScrollRestoration />
+        <Scripts />
+      </body>
     </html>
   );
 }
