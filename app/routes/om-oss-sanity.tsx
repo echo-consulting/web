@@ -70,7 +70,7 @@ export default function OmOssSanity({ loaderData }: Route.ComponentProps) {
   return (
     <div className="relative z-10 pt-32 px-8 max-w-[900px] mx-auto text-white pb-20">
       {data.image && (
-        <div className="mb-12">
+        <div className="mb-8">
           <img
             src={urlFor(data.image).width(1200).auto("format").url()}
             alt={data.name}
@@ -79,52 +79,13 @@ export default function OmOssSanity({ loaderData }: Route.ComponentProps) {
         </div>
       )}
 
-      <h1 className="text-5xl font-bold mb-8 tracking-tight">{data.name}</h1>
+      <h1 className="text-5xl font-bold mb-3 tracking-tight">{data.name}</h1>
 
       {data.description && (
-        <div className="prose prose-invert prose-lg max-w-none mb-16 opacity-90 text-gray-200">
+        <div className="prose prose-invert prose-lg max-w-none mb-10 opacity-90 text-gray-200">
           <ReactMarkdown>{data.description}</ReactMarkdown>
         </div>
       )}
-
-      <section className="mb-20">
-        <h2 className="text-3xl font-bold mb-8 border-b border-gray-800 pb-4">Vårt Team</h2>
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
-          {data.members?.map((member, idx) => (
-            <div
-              key={member.profile?._id || idx}
-              className="flex flex-col items-center group motion-safe:animate-in motion-safe:fade-in motion-safe:slide-in-from-bottom-4 duration-500"
-              style={{ animationDelay: `${idx * 100}ms` }}
-            >
-              <div className="w-32 h-32 md:w-40 md:h-40 rounded-full overflow-hidden mb-4 border-2 border-gray-800 shadow-xl bg-gray-900 group-hover:border-blue-500 transition-colors duration-300">
-                {member.profile?.picture ? (
-                  <img
-                    src={urlFor(member.profile.picture)
-                      .width(400)
-                      .height(400)
-                      .fit("crop")
-                      .auto("format")
-                      .url()}
-                    alt={`Portrett av ${member.profile.name}`}
-                    loading="lazy"
-                    className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
-                  />
-                ) : (
-                  <div className="w-full h-full flex items-center justify-center text-gray-500 bg-gray-800">
-                    <User size={40} />
-                  </div>
-                )}
-              </div>
-              <p className="font-bold text-lg leading-tight group-hover:text-blue-400 transition-colors text-center">
-                {member.profile?.name || "Navn mangler"}
-              </p>
-              <p className="text-gray-400 text-xs font-semibold uppercase mt-1 tracking-widest text-center">
-                {member.role}
-              </p>
-            </div>
-          ))}
-        </div>
-      </section>
 
       <section className="bg-[#011627] p-8 rounded-2xl border border-gray-800 shadow-inner">
         <h2 className="text-2xl font-bold mb-6 italic text-blue-400">Kontakt oss</h2>
@@ -160,6 +121,45 @@ export default function OmOssSanity({ loaderData }: Route.ComponentProps) {
               <span className="font-medium">LinkedIn</span>
             </a>
           )}
+        </div>
+      </section>
+
+      <section className="mb-20 mt-15">
+        <h2 className="text-3xl font-bold mb-8 border-b border-gray-800 pb-4">Vårt Team</h2>
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
+          {data.members?.map((member, idx) => (
+            <div
+              key={member.profile?._id || idx}
+              className="flex flex-col items-center group motion-safe:animate-in motion-safe:fade-in motion-safe:slide-in-from-bottom-4 duration-500"
+              style={{ animationDelay: `${idx * 100}ms` }}
+            >
+              <div className="w-32 h-32 md:w-40 md:h-40 rounded-full overflow-hidden mb-4 border-2 border-gray-800 shadow-xl bg-gray-900 group-hover:border-blue-500 transition-colors duration-300">
+                {member.profile?.picture ? (
+                  <img
+                    src={urlFor(member.profile.picture)
+                      .width(400)
+                      .height(400)
+                      .fit("crop")
+                      .auto("format")
+                      .url()}
+                    alt={`Portrett av ${member.profile.name}`}
+                    loading="lazy"
+                    className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                  />
+                ) : (
+                  <div className="w-full h-full flex items-center justify-center text-gray-500 bg-gray-800">
+                    <User size={40} />
+                  </div>
+                )}
+              </div>
+              <p className="font-bold text-lg leading-tight group-hover:text-blue-400 transition-colors text-center">
+                {member.profile?.name || "Navn mangler"}
+              </p>
+              <p className="text-gray-400 text-xs font-semibold uppercase mt-1 tracking-widest text-center">
+                {member.role}
+              </p>
+            </div>
+          ))}
         </div>
       </section>
     </div>
