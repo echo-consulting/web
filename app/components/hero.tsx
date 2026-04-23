@@ -23,7 +23,7 @@ export function Hero() {
           />
         )}
       </Title>
-      <Box className="max-w-lg pb-4 block">
+      <Box className="max-w-lg pt-5 sm:pt-0 pb-4 block">
         <Text size="lg">
           Vi tilbyr profesjonelle konsulenttjenester til rimelige priser, skreddersydd for dine
           behov. La oss hjelpe deg med å nå dine mål uten å sprenge budsjettet!
